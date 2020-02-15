@@ -54,41 +54,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddStudentForm.cs">
+    <Compile Include="Forms\AddStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStudentForm.Designer.cs">
+    <Compile Include="Forms\AddStudentForm.Designer.cs">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClassroomForm.cs">
+    <Compile Include="Forms\ClassroomForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClassroomForm.Designer.cs">
+    <Compile Include="Forms\ClassroomForm.Designer.cs">
       <DependentUpon>ClassroomForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login_Form.cs">
+    <Compile Include="Forms\Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login_Form.Designer.cs">
+    <Compile Include="Forms\Login_Form.Designer.cs">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageStudentsForm.cs">
+    <Compile Include="Forms\ManageStudentsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageStudentsForm.Designer.cs">
+    <Compile Include="Forms\ManageStudentsForm.Designer.cs">
       <DependentUpon>ManageStudentsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MY_DB.cs" />
-    <Compile Include="PrintStudentsForm.cs">
+    <Compile Include="Forms\PrintStudentsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrintStudentsForm.Designer.cs">
+    <Compile Include="Forms\PrintStudentsForm.Designer.cs">
       <DependentUpon>PrintStudentsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -98,41 +98,41 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="StaticsForm.cs">
+    <Compile Include="Forms\StaticsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StaticsForm.Designer.cs">
+    <Compile Include="Forms\StaticsForm.Designer.cs">
       <DependentUpon>StaticsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="STUDENT.cs" />
-    <Compile Include="studentsListForm.cs">
+    <Compile Include="Forms\studentsListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="studentsListForm.Designer.cs">
+    <Compile Include="Forms\studentsListForm.Designer.cs">
       <DependentUpon>studentsListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateDeleteStudentForm.cs">
+    <Compile Include="Forms\UpdateDeleteStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateDeleteStudentForm.Designer.cs">
+    <Compile Include="Forms\UpdateDeleteStudentForm.Designer.cs">
       <DependentUpon>UpdateDeleteStudentForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddStudentForm.resx">
+    <EmbeddedResource Include="Forms\AddStudentForm.resx">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClassroomForm.resx">
+    <EmbeddedResource Include="Forms\ClassroomForm.resx">
       <DependentUpon>ClassroomForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login_Form.resx">
+    <EmbeddedResource Include="Forms\Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageStudentsForm.resx">
+    <EmbeddedResource Include="Forms\ManageStudentsForm.resx">
       <DependentUpon>ManageStudentsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrintStudentsForm.resx">
+    <EmbeddedResource Include="Forms\PrintStudentsForm.resx">
       <DependentUpon>PrintStudentsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -140,13 +140,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaticsForm.resx">
+    <EmbeddedResource Include="Forms\StaticsForm.resx">
       <DependentUpon>StaticsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="studentsListForm.resx">
+    <EmbeddedResource Include="Forms\studentsListForm.resx">
       <DependentUpon>studentsListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateDeleteStudentForm.resx">
+    <EmbeddedResource Include="Forms\UpdateDeleteStudentForm.resx">
       <DependentUpon>UpdateDeleteStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

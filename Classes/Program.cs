@@ -14,6 +14,7 @@ namespace Catalog
         [STAThread]
         static void Main()
         {
+            //test
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Login_Form fLogin = new Login_Form();
