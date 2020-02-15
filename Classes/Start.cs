@@ -8,23 +8,21 @@ namespace Catalog
 {
     static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
-            //test
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //Create new login page
             Login_Form fLogin = new Login_Form();
-            if (fLogin.ShowDialog() == DialogResult.OK)
+            if (fLogin.ShowDialog() == DialogResult.OK) //if login successful
             {
-                Application.Run(new MainForm());
+                Application.Run(new MainForm()); //run program
             }
             else
             {
-                Application.Exit();
+                Application.Exit(); 
             }
         }
     }

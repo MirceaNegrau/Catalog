@@ -15,24 +15,29 @@ namespace Catalog
 {
     public partial class AddStudentForm : Form
     {
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-           (
-               int nLeftRect,     // x-coordinate of upper-left corner
-               int nTopRect,      // y-coordinate of upper-left corner
-               int nRightRect,    // x-coordinate of lower-right corner
-               int nBottomRect,   // y-coordinate of lower-right corner
-               int nWidthEllipse, // width of ellipse
-               int nHeightEllipse // height of ellipse
-           );
-
         public AddStudentForm()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 50, 50));
         }
-
+        bool verif()
+        {
+            if ((textBoxPrenume.Text.Trim() == "") ||
+                (textBoxNume.Text.Trim() == "") ||
+                (comboBoxClasa.Text.Trim() == "") ||
+                (textBoxTelefon.Text.Trim() == "") ||
+                (textBoxAdresa.Text.Trim() == "") ||
+                (pictureBoxStudentImage.Image == null) || (!"12A12B11A11B10A10B9A9B8A8B7A7B6A6B5A5B4A4B3A3B2A2B1A1B".Contains(comboBoxClasa.Text)))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        #region Buttons
         private void buttonUploadImage_Click(object sender, EventArgs e)
         {
             OpenFileDialog opf = new OpenFileDialog();
@@ -48,6 +53,7 @@ namespace Catalog
         {
             Decolorare();
             STUDENT student = new STUDENT();
+            #region Variables 
             string fname = textBoxPrenume.Text;
             string lname = textBoxNume.Text;
             string clasa = comboBoxClasa.Text;
@@ -63,6 +69,7 @@ namespace Catalog
 
             int born_year = dateTimePicker1.Value.Year;
             int this_year = DateTime.Now.Year;
+            #endregion
             if((this_year-born_year<10)||(this_year-born_year>100))
             {
                 MessageBox.Show("Vârsta trebuie să fie între 10 și 100", "Dată de naștere invalidă", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -84,26 +91,113 @@ namespace Catalog
                 MessageBox.Show("Există câmpuri necompletate!", "Adaugă student", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-
-        bool verif()
+        #endregion        
+        #region Color/Hover
+        Color albastru;
+        Color negru;
+        internal void Decolorare()
         {
-            if ((textBoxPrenume.Text.Trim() == "") ||
-                (textBoxNume.Text.Trim() == "") ||
-                (comboBoxClasa.Text.Trim() == "") ||
-                (textBoxTelefon.Text.Trim() == "") ||
-                (textBoxAdresa.Text.Trim() == "") ||
-                (pictureBoxStudentImage.Image == null) || (!"12A12B11A11B10A10B9A9B8A8B7A7B6A6B5A5B4A4B3A3B2A2B1A1B".Contains(comboBoxClasa.Text)))
-            {
-                return false;
-            }
-            else
-            { 
-                return true;
-            }
+            textBoxAdresa.ForeColor = Color.WhiteSmoke;
+            textBoxNume.ForeColor = Color.WhiteSmoke;
+            textBoxPrenume.ForeColor = Color.WhiteSmoke;
+            textBoxTelefon.ForeColor = Color.WhiteSmoke;
 
+            panelAdresa.BackColor = Color.WhiteSmoke;
+            panelPrenume.BackColor = Color.WhiteSmoke;
+            panelNume.BackColor = Color.WhiteSmoke;
+            panelTelefon.BackColor = Color.WhiteSmoke;
+
+            if (textBoxAdresa.Text == "")
+            {
+                textBoxAdresa.Text = "Adresă";
+            }
+            if (textBoxNume.Text == "")
+            {
+                textBoxNume.Text = "Nume";
+            }
+            if (textBoxTelefon.Text == "")
+            {
+                textBoxTelefon.Text = "Telefon";
+            }
+            if (textBoxPrenume.Text == "")
+            {
+                textBoxPrenume.Text = "Prenume";
+            }
         }
 
-        //Decolorare
+        private void AddStudentForm_Load(object sender, EventArgs e)
+        {
+            albastru = buttonAddStudent.ForeColor;
+            negru = buttonAddStudent.BackColor;
+        }
+        private void buttonUploadImage_MouseEnter(object sender, EventArgs e)
+        {
+            buttonUploadImage.ForeColor = negru;
+            buttonUploadImage.BackColor = albastru;
+        }
+
+        private void buttonUploadImage_MouseLeave(object sender, EventArgs e)
+        {
+            buttonUploadImage.ForeColor = albastru;
+            buttonUploadImage.BackColor = negru;
+        }
+        private void AddStudentForm_Click(object sender, EventArgs e)
+        {
+            Decolorare();
+        }
+
+        private void buttonAddStudent_MouseEnter(object sender, EventArgs e)
+        {
+            buttonAddStudent.Font = new Font(buttonAddStudent.Font.FontFamily, buttonAddStudent.Font.Size, FontStyle.Bold);
+        }
+
+        private void buttonAddStudent_MouseLeave(object sender, EventArgs e)
+        {
+            buttonAddStudent.Font = new Font(buttonAddStudent.Font.FontFamily, buttonAddStudent.Font.Size, FontStyle.Regular);
+        }
+        private void buttonExit1_MouseEnter(object sender, EventArgs e)
+        {
+            buttonExit1.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.closeWindow2));
+        }
+
+        private void buttonExit1_MouseLeave(object sender, EventArgs e)
+        {
+            buttonExit1.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.closeWindow1));
+        }
+
+        private void dateTimePicker1_Enter(object sender, EventArgs e)
+        {
+            Decolorare();
+        }
+
+        private void radioButtonFemale_Click(object sender, EventArgs e)
+        {
+            Decolorare();
+        }
+
+        private void radioButtonMale_Click(object sender, EventArgs e)
+        {
+            Decolorare();
+        }
+
+        private void comboBoxClasa_Click(object sender, EventArgs e)
+        {
+            Decolorare();
+        }
+        #endregion
+        #region RoundBorder
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+           (
+               int nLeftRect,     // x-coordinate of upper-left corner
+               int nTopRect,      // y-coordinate of upper-left corner
+               int nRightRect,    // x-coordinate of lower-right corner
+               int nBottomRect,   // y-coordinate of lower-right corner
+               int nWidthEllipse, // width of ellipse
+               int nHeightEllipse // height of ellipse
+           );
+        #endregion
+        #region TextBoxClicking
         private void textBoxLname_Click(object sender, EventArgs e)
         {
             if (textBoxNume.Text == "Nume")
@@ -219,60 +313,8 @@ namespace Catalog
                 textBoxPrenume.Text = "Prenume";
             }
         }
-
-        internal void Decolorare()
-        {
-            textBoxAdresa.ForeColor = Color.WhiteSmoke;
-            textBoxNume.ForeColor = Color.WhiteSmoke;
-            textBoxPrenume.ForeColor = Color.WhiteSmoke;
-            textBoxTelefon.ForeColor = Color.WhiteSmoke;
-
-            panelAdresa.BackColor = Color.WhiteSmoke;
-            panelPrenume.BackColor = Color.WhiteSmoke;
-            panelNume.BackColor = Color.WhiteSmoke;
-            panelTelefon.BackColor = Color.WhiteSmoke;
-
-            if (textBoxAdresa.Text == "")
-            {
-                textBoxAdresa.Text = "Adresă";
-            }
-            if (textBoxNume.Text == "")
-            {
-                textBoxNume.Text = "Nume";
-            }
-            if (textBoxTelefon.Text == "")
-            {
-                textBoxTelefon.Text = "Telefon";
-            }
-            if (textBoxPrenume.Text == "")
-            {
-                textBoxPrenume.Text = "Prenume";
-            }
-        }
-
-        private void AddStudentForm_Click(object sender, EventArgs e)
-        {
-            Decolorare();
-        }
-
-        private void buttonAddStudent_MouseEnter(object sender, EventArgs e)
-        {
-            buttonAddStudent.Font = new Font(buttonAddStudent.Font.FontFamily, buttonAddStudent.Font.Size, FontStyle.Bold);
-        }
-
-        private void buttonAddStudent_MouseLeave(object sender, EventArgs e)
-        {
-            buttonAddStudent.Font = new Font(buttonAddStudent.Font.FontFamily, buttonAddStudent.Font.Size, FontStyle.Regular);
-        }
-
-        private void buttonExit1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
-            this.Close();
-        }
-
+        #endregion
+        #region BorderMoveBar
         bool mouseDown;
         private Point offset;
 
@@ -298,57 +340,16 @@ namespace Catalog
                 Location = new Point(currentScreenPos.X - offset.X, currentScreenPos.Y - offset.Y);
             }
         }
-        //-------------------------------------------------
-        //EXIT BUTTONS
+        #endregion
+        #region ExitButtons
+        private void buttonExit1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm mainForm = new MainForm();
+            mainForm.ShowDialog();
+            this.Close();
+        }
+        #endregion
 
-        private void buttonExit1_MouseEnter(object sender, EventArgs e)
-        {
-            buttonExit1.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.closeWindow2));
-        }
-
-        private void buttonExit1_MouseLeave(object sender, EventArgs e)
-        {
-            buttonExit1.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.closeWindow1));
-        }
-
-        //Butoane
-        Color albastru;
-        Color negru;
-        private void AddStudentForm_Load(object sender, EventArgs e)
-        {
-            albastru = buttonAddStudent.ForeColor;
-            negru = buttonAddStudent.BackColor;
-        }
-        private void buttonUploadImage_MouseEnter(object sender, EventArgs e)
-        {
-            buttonUploadImage.ForeColor = negru;
-            buttonUploadImage.BackColor = albastru;
-        }
-
-        private void buttonUploadImage_MouseLeave(object sender, EventArgs e)
-        {
-            buttonUploadImage.ForeColor = albastru;
-            buttonUploadImage.BackColor = negru;
-        }
-
-        private void dateTimePicker1_Enter(object sender, EventArgs e)
-        {
-            Decolorare();
-        }
-
-        private void radioButtonFemale_Click(object sender, EventArgs e)
-        {
-            Decolorare();
-        }
-
-        private void radioButtonMale_Click(object sender, EventArgs e)
-        {
-            Decolorare();
-        }
-
-        private void comboBoxClasa_Click(object sender, EventArgs e)
-        {
-            Decolorare();
-        }
     }
 }

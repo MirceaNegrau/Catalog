@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <ApplicationIcon>Other\icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
@@ -84,14 +84,14 @@
     <Compile Include="Forms\ManageStudentsForm.Designer.cs">
       <DependentUpon>ManageStudentsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MY_DB.cs" />
+    <Compile Include="Classes\MY_DB.cs" />
     <Compile Include="Forms\PrintStudentsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\PrintStudentsForm.Designer.cs">
       <DependentUpon>PrintStudentsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Classes\Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -104,7 +104,7 @@
     <Compile Include="Forms\StaticsForm.Designer.cs">
       <DependentUpon>StaticsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="STUDENT.cs" />
+    <Compile Include="Classes\STUDENT.cs" />
     <Compile Include="Forms\studentsListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,7 +160,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Other\App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\exam.png" />
@@ -177,7 +177,7 @@
     <None Include="Resources\icons8-replace-100.png" />
     <None Include="Resources\circle.png" />
     <None Include="Resources\book.png" />
-    <Content Include="icon.ico" />
+    <Content Include="Other\icon.ico" />
     <Content Include="Resources\closeWindow1.png" />
     <None Include="Resources\iconStatistici1.png" />
     <None Include="Resources\icon1.png" />
