@@ -313,5 +313,25 @@ namespace Catalog
         {
             buttonExit1.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.closeWindow1));
         }
+
+        private void buttonAddStudent_MouseHover(object sender, EventArgs e)
+        {
+            toolTipAdd.Show("Adaugă elev", buttonAddStudent);
+        }
+
+        private void buttonDelete_MouseHover(object sender, EventArgs e)
+        {
+            toolTipAdd.Show("Șterge elev", buttonDelete);
+        }
+
+        private void buttonReset_MouseHover(object sender, EventArgs e)
+        {
+            toolTipAdd.Show("Refresh pagină", buttonReset);
+        }
+
+        private void buttonEdit_MouseHover(object sender, EventArgs e)
+        {
+            toolTipAdd.Show("Editează elev", buttonEdit);
+        }
     }
 }

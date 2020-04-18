@@ -42,15 +42,18 @@ namespace Catalog
             command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = textBoxUsername.Text;
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = textBoxPassword.Text;
             adapter.SelectCommand = command;
-                try
+            try
                 {
                     adapter.Fill(table);
-                    if (table.Rows.Count > 0)
+                    if (table.Rows.Count == 2)
                     {
                         this.DialogResult = DialogResult.OK;
-
                     }
-                    else
+                    else if (table.Rows.Count == 1)
+                    {
+                        this.DialogResult = DialogResult.Yes;
+                    }
+                    else    
                     {
                         MessageBox.Show("Utilizator sau parolă greșită.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }

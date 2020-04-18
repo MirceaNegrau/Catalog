@@ -37,12 +37,11 @@
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
             this.textBoxTelefon = new System.Windows.Forms.TextBox();
             this.textBoxAdresa = new System.Windows.Forms.TextBox();
-            this.pictureBoxStudentImage = new System.Windows.Forms.PictureBox();
             this.buttonUploadImage = new System.Windows.Forms.Button();
             this.buttonAddStudent = new System.Windows.Forms.Button();
             this.comboBoxClasa = new System.Windows.Forms.ComboBox();
-            this.buttonExit1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonExit1 = new System.Windows.Forms.Button();
             this.panelNume = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -136,8 +135,8 @@
             this.panel40 = new System.Windows.Forms.Panel();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.textBox20 = new System.Windows.Forms.TextBox();
+            this.pictureBoxStudentImage = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentImage)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelNume.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -189,6 +188,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentImage)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -216,7 +216,7 @@
             this.textBoxNume.HideSelection = false;
             this.textBoxNume.Location = new System.Drawing.Point(143, 103);
             this.textBoxNume.Name = "textBoxNume";
-            this.textBoxNume.Size = new System.Drawing.Size(178, 22);
+            this.textBoxNume.Size = new System.Drawing.Size(200, 22);
             this.textBoxNume.TabIndex = 1;
             this.textBoxNume.Text = "Nume";
             this.textBoxNume.Click += new System.EventHandler(this.textBoxLname_Click);
@@ -230,7 +230,7 @@
             this.textBoxPrenume.HideSelection = false;
             this.textBoxPrenume.Location = new System.Drawing.Point(143, 139);
             this.textBoxPrenume.Name = "textBoxPrenume";
-            this.textBoxPrenume.Size = new System.Drawing.Size(187, 22);
+            this.textBoxPrenume.Size = new System.Drawing.Size(200, 22);
             this.textBoxPrenume.TabIndex = 2;
             this.textBoxPrenume.Text = "Prenume";
             this.textBoxPrenume.Click += new System.EventHandler(this.textBoxPrenume_Click);
@@ -283,7 +283,7 @@
             this.textBoxTelefon.HideSelection = false;
             this.textBoxTelefon.Location = new System.Drawing.Point(143, 178);
             this.textBoxTelefon.Name = "textBoxTelefon";
-            this.textBoxTelefon.Size = new System.Drawing.Size(100, 22);
+            this.textBoxTelefon.Size = new System.Drawing.Size(201, 22);
             this.textBoxTelefon.TabIndex = 3;
             this.textBoxTelefon.Text = "Telefon";
             this.textBoxTelefon.Click += new System.EventHandler(this.textBoxTelefon_Click);
@@ -297,20 +297,10 @@
             this.textBoxAdresa.HideSelection = false;
             this.textBoxAdresa.Location = new System.Drawing.Point(142, 214);
             this.textBoxAdresa.Name = "textBoxAdresa";
-            this.textBoxAdresa.Size = new System.Drawing.Size(215, 22);
+            this.textBoxAdresa.Size = new System.Drawing.Size(202, 22);
             this.textBoxAdresa.TabIndex = 4;
             this.textBoxAdresa.Text = "Adresă";
             this.textBoxAdresa.Click += new System.EventHandler(this.textBoxAdresa_Click);
-            // 
-            // pictureBoxStudentImage
-            // 
-            this.pictureBoxStudentImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(196)))), ((int)(((byte)(244)))));
-            this.pictureBoxStudentImage.Location = new System.Drawing.Point(19, 62);
-            this.pictureBoxStudentImage.Name = "pictureBoxStudentImage";
-            this.pictureBoxStudentImage.Size = new System.Drawing.Size(102, 126);
-            this.pictureBoxStudentImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxStudentImage.TabIndex = 13;
-            this.pictureBoxStudentImage.TabStop = false;
             // 
             // buttonUploadImage
             // 
@@ -359,29 +349,25 @@
             "10A",
             "10B",
             "9A",
-            "9B",
-            "8A",
-            "8B",
-            "7A",
-            "7B",
-            "6A",
-            "6B",
-            "5A",
-            "5B",
-            "4A",
-            "4B",
-            "3A",
-            "3B",
-            "2A",
-            "2B",
-            "1A",
-            "1B"});
+            "9B"});
             this.comboBoxClasa.Location = new System.Drawing.Point(261, 59);
             this.comboBoxClasa.Name = "comboBoxClasa";
             this.comboBoxClasa.Size = new System.Drawing.Size(82, 30);
             this.comboBoxClasa.TabIndex = 18;
             this.comboBoxClasa.TabStop = false;
             this.comboBoxClasa.Click += new System.EventHandler(this.comboBoxClasa_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.panel1.Controls.Add(this.buttonExit1);
+            this.panel1.Location = new System.Drawing.Point(-2, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(517, 35);
+            this.panel1.TabIndex = 19;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // buttonExit1
             // 
@@ -398,18 +384,6 @@
             this.buttonExit1.Click += new System.EventHandler(this.buttonExit1_Click);
             this.buttonExit1.MouseEnter += new System.EventHandler(this.buttonExit1_MouseEnter);
             this.buttonExit1.MouseLeave += new System.EventHandler(this.buttonExit1_MouseLeave);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.panel1.Controls.Add(this.buttonExit1);
-            this.panel1.Location = new System.Drawing.Point(-2, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(517, 35);
-            this.panel1.TabIndex = 19;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // panelNume
             // 
@@ -1394,6 +1368,16 @@
             this.textBox20.TabIndex = 12;
             this.textBox20.Text = "Utilizator";
             // 
+            // pictureBoxStudentImage
+            // 
+            this.pictureBoxStudentImage.Image = global::Catalog.Properties.Resources.defaultAvatar;
+            this.pictureBoxStudentImage.Location = new System.Drawing.Point(19, 62);
+            this.pictureBoxStudentImage.Name = "pictureBoxStudentImage";
+            this.pictureBoxStudentImage.Size = new System.Drawing.Size(102, 126);
+            this.pictureBoxStudentImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxStudentImage.TabIndex = 13;
+            this.pictureBoxStudentImage.TabStop = false;
+            // 
             // AddStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1429,7 +1413,6 @@
             this.Click += new System.EventHandler(this.AddStudentForm_Click);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentImage)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panelNume.ResumeLayout(false);
             this.panelNume.PerformLayout();
@@ -1501,6 +1484,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

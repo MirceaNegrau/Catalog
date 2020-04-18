@@ -541,7 +541,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonListaStudenti;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;

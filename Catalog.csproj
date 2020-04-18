@@ -92,6 +92,12 @@
       <DependentUpon>PrintStudentsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Start.cs" />
+    <Compile Include="Forms\FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ClassroomForm.resx">
       <DependentUpon>ClassroomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
@@ -163,6 +172,7 @@
     <None Include="Other\App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\defaultAvatar.jpg" />
     <None Include="Resources\exam.png" />
     <None Include="Resources\sheet.png" />
     <None Include="Resources\icons8-maintenance-80.png" />
