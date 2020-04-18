@@ -82,6 +82,7 @@ namespace Catalog
                 textBoxPassword.PasswordChar = '\0';
                 textBoxPassword.Text = "Password";
             }
+            textBoxPassword.PasswordChar = '∙';
         }
 
         private void textBoxPassword_Click(object sender, EventArgs e)
@@ -129,6 +130,14 @@ namespace Catalog
             offset.X = e.X;
             offset.Y = e.Y;
             mouseDown = true;
+            textBoxPassword.PasswordChar = '∙';
+            pictureBoxPassword.BackgroundImage = Properties.Resources.password1;
+            textBoxPassword.ForeColor = Color.WhiteSmoke;
+            textBoxPassword.ForeColor = Color.WhiteSmoke;
+
+            pictureBoxUsername.BackgroundImage = Properties.Resources.user1;
+            textBoxUsername.ForeColor = Color.WhiteSmoke;
+            textBoxUsername.ForeColor = Color.WhiteSmoke;
         }
 
         private void panel1_MouseUp(object sender, MouseEventArgs e)
@@ -147,6 +156,31 @@ namespace Catalog
 
         private void Login_Form_Load(object sender, EventArgs e)
         {
+            textBoxPassword.PasswordChar = '∙';
+        }
+
+        private void Login_Form_Click(object sender, EventArgs e)
+        {
+            textBoxPassword.PasswordChar = '∙';
+            pictureBoxPassword.BackgroundImage = Properties.Resources.password1;
+            textBoxPassword.ForeColor = Color.WhiteSmoke;
+            textBoxPassword.ForeColor = Color.WhiteSmoke;
+
+            pictureBoxUsername.BackgroundImage = Properties.Resources.user1;
+            textBoxUsername.ForeColor = Color.WhiteSmoke;
+            textBoxUsername.ForeColor = Color.WhiteSmoke;
+        }
+
+        private void pictureBoxIcon_Click(object sender, EventArgs e)
+        {
+            textBoxPassword.PasswordChar = '∙';
+            pictureBoxPassword.BackgroundImage = Properties.Resources.password1;
+            textBoxPassword.ForeColor = Color.WhiteSmoke;
+            textBoxPassword.ForeColor = Color.WhiteSmoke;
+
+            pictureBoxUsername.BackgroundImage = Properties.Resources.user1;
+            textBoxUsername.ForeColor = Color.WhiteSmoke;
+            textBoxUsername.ForeColor = Color.WhiteSmoke;
         }
     }
 }

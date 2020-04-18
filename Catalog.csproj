@@ -84,7 +84,7 @@
     <Compile Include="Forms\ManageStudentsForm.Designer.cs">
       <DependentUpon>ManageStudentsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\MY_DB.cs" />
+    <Compile Include="Classes\MySQLdb.cs" />
     <Compile Include="Forms\PrintStudentsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,7 +104,7 @@
     <Compile Include="Forms\StaticsForm.Designer.cs">
       <DependentUpon>StaticsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\STUDENT.cs" />
+    <Compile Include="Classes\Functions.cs" />
     <Compile Include="Forms\studentsListForm.cs">
       <SubType>Form</SubType>
     </Compile>

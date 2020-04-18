@@ -82,9 +82,9 @@
             this.textBoxUsername.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsername.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxUsername.HideSelection = false;
-            this.textBoxUsername.Location = new System.Drawing.Point(68, 164);
+            this.textBoxUsername.Location = new System.Drawing.Point(64, 164);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(244, 22);
+            this.textBoxUsername.Size = new System.Drawing.Size(252, 22);
             this.textBoxUsername.TabIndex = 0;
             this.textBoxUsername.Text = "Username";
             this.textBoxUsername.Click += new System.EventHandler(this.textBoxUsername_Click);
@@ -114,9 +114,9 @@
             this.panelUsername.Controls.Add(this.panel2);
             this.panelUsername.Controls.Add(this.pictureBox3);
             this.panelUsername.Controls.Add(this.textBox1);
-            this.panelUsername.Location = new System.Drawing.Point(37, 192);
+            this.panelUsername.Location = new System.Drawing.Point(67, 191);
             this.panelUsername.Name = "panelUsername";
-            this.panelUsername.Size = new System.Drawing.Size(274, 1);
+            this.panelUsername.Size = new System.Drawing.Size(252, 1);
             this.panelUsername.TabIndex = 4;
             // 
             // panel5
@@ -301,9 +301,9 @@
             this.textBoxPassword.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPassword.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxPassword.HideSelection = false;
-            this.textBoxPassword.Location = new System.Drawing.Point(68, 206);
+            this.textBoxPassword.Location = new System.Drawing.Point(64, 206);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(245, 22);
+            this.textBoxPassword.Size = new System.Drawing.Size(255, 22);
             this.textBoxPassword.TabIndex = 1;
             this.textBoxPassword.Text = "Password";
             this.textBoxPassword.Click += new System.EventHandler(this.textBoxPassword_Click);
@@ -312,9 +312,9 @@
             // 
             this.panelPassword.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panelPassword.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.panelPassword.Location = new System.Drawing.Point(37, 231);
+            this.panelPassword.Location = new System.Drawing.Point(67, 230);
             this.panelPassword.Name = "panelPassword";
-            this.panelPassword.Size = new System.Drawing.Size(274, 1);
+            this.panelPassword.Size = new System.Drawing.Size(252, 1);
             this.panelPassword.TabIndex = 13;
             // 
             // button2
@@ -341,9 +341,9 @@
             // 
             this.pictureBoxPassword.BackgroundImage = global::Catalog.Properties.Resources.password1;
             this.pictureBoxPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxPassword.Location = new System.Drawing.Point(36, 202);
+            this.pictureBoxPassword.Location = new System.Drawing.Point(22, 199);
             this.pictureBoxPassword.Name = "pictureBoxPassword";
-            this.pictureBoxPassword.Size = new System.Drawing.Size(24, 24);
+            this.pictureBoxPassword.Size = new System.Drawing.Size(36, 36);
             this.pictureBoxPassword.TabIndex = 14;
             this.pictureBoxPassword.TabStop = false;
             // 
@@ -351,9 +351,9 @@
             // 
             this.pictureBoxUsername.BackgroundImage = global::Catalog.Properties.Resources.user1;
             this.pictureBoxUsername.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxUsername.Location = new System.Drawing.Point(36, 162);
+            this.pictureBoxUsername.Location = new System.Drawing.Point(22, 157);
             this.pictureBoxUsername.Name = "pictureBoxUsername";
-            this.pictureBoxUsername.Size = new System.Drawing.Size(24, 24);
+            this.pictureBoxUsername.Size = new System.Drawing.Size(36, 36);
             this.pictureBoxUsername.TabIndex = 10;
             this.pictureBoxUsername.TabStop = false;
             // 
@@ -367,6 +367,7 @@
             this.pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxIcon.TabIndex = 9;
             this.pictureBoxIcon.TabStop = false;
+            this.pictureBoxIcon.Click += new System.EventHandler(this.pictureBoxIcon_Click);
             // 
             // panel1
             // 
@@ -420,6 +421,7 @@
             this.Text = "AnyDesk";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Login_Form_Load);
+            this.Click += new System.EventHandler(this.Login_Form_Click);
             this.panelUsername.ResumeLayout(false);
             this.panelUsername.PerformLayout();
             this.panel5.ResumeLayout(false);
